@@ -16,14 +16,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editText = findViewById(R.id.edit_text);
     }
 
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 }
